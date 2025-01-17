@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body style="background-color:white;">
+    <h1>Forms</h1>
+    <form action="backend.php">
+        <label for="1">Name : </label>
+        <input type="text" name="My name" id="1" placeholder=" Ener Name here"><br> <!-- name attribute used for provide info to backend to store-->
+        <!-- <label>
+              Name : <input type="text" name="My name" placeholder=" Ener Name here"><br>
+        </label> -->
+        <label for="2">Roll : </label>
+        <input type="number" name="My roll" id="2" placeholder="Enter roll number here"><br>
+        <label for="3">Branch : </label>
+        <input type="text" name="Branch" id="3" placeholder="Enter your brach"><br>
+        <label>
+            Gender :  Male <input type="radio" name="mygender"> Female <input type="radio" name="mygender"><br>
+            <!-- here in radio button name of both should be same(mygender) otherwise we can choose multiple radio -->
+        </label>
+        <label for="5">About : </label>
+        <br> <textarea name="about" id="5" cols="30" rows="10" placeholder="Write about you here.."></textarea><br>
+        <!-- assume here only size of rows > cols -->
+        <label for="6">Email : </label>
+        <input type="email" name="Email" id="6"><br>
+        <label for="7">Date : </label>
+        <input type="date" name="" id="7"><br>
+        <label for="8">Date and Time</label>
+        <input type="datetime" name="" id="8"><br>
+        <label for="9">Are you eligible for scholarship? </label>
+        <input type="checkbox" name="eligiblity criteria" id="9"><br>
+        <label for="10">Are you disabled?</label>
+        <input type="checkbox" name="eligiblity criteria" id="10" checked><br>
+        <label for="11"></label>
+        <select name="cars" id="11">
+            <option value="" disabled selected>choose a car</option> <!-- disabled selected (for only show)-->
+            <option value="swft">swift</option>                      <!-- value attribute provide info to backend to store-->
+            <option value="tata">super tata</option>
+        </select><br>
+
+        <input type="submit" value="Submit now"><input type="reset" value="reset now">
+
+    </form>
+</body>
+
+</html>
