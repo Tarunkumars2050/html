@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline internal and external css</title>
+    <style>
+        /* element selector */
+        h1,span {
+            background-color: blue;
+            color: white;
+        }
+
+        /* Class selector */
+        .red {
+            color: white;
+        }
+
+        /* id selector */
+        #green-bg {
+            background-color: green;
+        }
+        /* Child selector *//* This work only if p is directly inside of div*/
+        div>p{
+            background-color: mediumseagreen;
+            color:white;
+        }
+        /* Descended collector *//* This also work even p is not directly inside div*/
+        div p{
+            background-color: white;
+            color:green;
+        }
+        /* Universal selector */ /*apply on all element*/
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* Pseudo selector */
+        a:link{
+            color:blue;
+            background-color: white;
+        }
+        a:visited{
+            color:purple; 
+            background-color: yellow;
+        }
+        a:hover{
+            background-color: red;
+            color: white;
+        }
+        a:active{
+            color:red;
+            background-color: black;
+        }
+        /* pseudo (first child) */
+        span:first-child{
+            background-color: black;
+            color:white;
+        }
+        /* box  */
+        .box{
+            background-color: goldenrod;
+        }
+        .box1{
+            color:white;
+            padding: 10px;
+            border: 2px solid green;
+            margin: 10px;
+            height: 40px; /*now it is height of content(excluding border padding and margin)*/
+            /* here i also can use box-sizing:content-box; */
+        }
+        /* margin collapse concept is if there is a margin of two block collapse and make margin of large size(e.g. 30px +20px ==30px) */
+        .box2{
+            color:brown;
+            padding:10px;
+            border:2px solid red;
+            margin:10px;
+            box-sizing: border-box; /* now it is of content+padding+border*/
+            height: 40px;;
+        }
+
+    </style>
+</head>
+
+<body style="background:radial-gradient(yellow,transparent)">
+    <h1>Inline internal and external css </h1>
+    <span style="color:aqua;background-color: maroon;">This is a span.</span> <!-- It is a inline css -->
+    <div id="green-bg" class="red">Thsi is a div with id green-bg</div>
+    <div class="red">This is a div with class red</div>
+    <div>
+        <p> This is a paragraph inside div element</p>
+    </div>
+    <div>
+        <article>
+            <p>This is a paragraph inside article inside div.</p>
+        </article>
+    </div>
+    <a href="https://tarunkumars2050.github.io/html/">GO to home page of this site.</a><br>
+    <a href="https:www.w3school.com">w3 school</a><br>
+    <p>
+        <span>I am first child of p</span><br>
+        <span>I am second child of p</span><br>
+    </p>
+    <span>
+        <span>I am first child of span</span><br>
+        <span>I am second child of span</span>
+    </span>
+    <div class="box box1">This is a box and box1</div>
+    <div class="box box2">This is a box and box2</div>
+
+</body>
+
+</html>
